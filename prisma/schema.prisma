@@ -57,3 +57,16 @@ model User {
   accounts              Account[]
   sessions              Session[]
 }
+
+model LolUserInfo {
+  id                    String      @id @default(auto()) @map("_id") @db.ObjectId
+  puuid                 String      @unique
+  name                  String      //하보리
+  tagLine               String      @unique //카탈아
+  profileIconId         Int         @default(0)
+  revisionDate          Int         @default(0)
+  summonerLevel         Int         @default(0)
+
+  createdAt             DateTime    @default(now())
+  updatedAt             DateTime    @updatedAt
+}

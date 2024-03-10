@@ -4,6 +4,11 @@ import Link from "next/link";
 import { signIn, signOut } from "next-auth/react";
 
 export default function Header({userId}) {
+
+  // console.log('(header) userId 뭐가 찍힐까: ', userId)
+
+  // 조건 ? 참 : 거짓
+
   return (
     <div className="flex justify-between items-center h-14 px-10 border-b border-gray-300 shadow-md">
       <div className="font-bold">
